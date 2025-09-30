@@ -1,8 +1,14 @@
-public class QuizSession
+using Microsoft.EntityFrameworkCore;
+using QuizApp.Models;
+
+namespace QuizApp.Models
 {
-    public int QuizSessionId { get; set; }
-    public string UserName { get; set; } = string.Empty;
-    public int QuizId { get; set; }
-    public virtual Quiz Quiz { get; set; } = default!;
-    public int Score { get; set; }
+    public class QuizSession
+    {
+        public int QuizSessionId { get; set; }
+        public string UserName { get; set; } = string.Empty;
+        public int QuizId { get; set; }
+        public virtual Quiz Quiz { get; set; } = default!;
+        public int Score { get; set; }
+    }
 }
