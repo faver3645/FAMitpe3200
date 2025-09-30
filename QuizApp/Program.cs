@@ -1,5 +1,5 @@
-using FAMitpe3200.Data;
 using Microsoft.EntityFrameworkCore;
+using QuizApp.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,8 +7,14 @@ var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
 // Registrer DbContext
-builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlServer(connectionString));
+//builder.Services.AddDbContext<ApplicationDbContext>(options =>
+   // options.UseSqlServer(connectionString));
+
+
+builder.Services.AddDbContext<ApplicationDbContext>(options => {
+    options.UseSqlite(
+        builder.Configuration["ConnectionStrings:ApplicationDbContextConnection"]);
+});
 
 builder.Services.AddControllersWithViews();
 
