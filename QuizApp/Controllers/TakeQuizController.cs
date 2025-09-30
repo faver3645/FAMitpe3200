@@ -1,7 +1,11 @@
-using Microsoft.EntityFrameworkCore;
-using MyShop.Models;
- 
-namespace MyShop.Controllers
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using QuizApp.Models;
+namespace QuizApp.Controllers;
+
 {
     public class TakeQuizController : Controller
     {
@@ -50,7 +54,7 @@ namespace MyShop.Controllers
                 }
             }
  
-            var result = new UserQuizResult
+            var result = new QuizSession
             {
                 UserName = userName,
                 Quiz = quiz,
@@ -62,7 +66,7 @@ namespace MyShop.Controllers
  
         // GET: /TakeQuiz/Result (kun for redirecting)
         [HttpGet]
-        public IActionResult Result(UserQuizResult result)
+        public IActionResult Result(QuizSession result)
         {
             return View(result);
         }

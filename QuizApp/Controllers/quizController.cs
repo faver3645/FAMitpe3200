@@ -1,9 +1,10 @@
-using Microsoft.AspNetCore.Mvc;        // For Controller, IActionResult, HttpPost, etc.
-using Microsoft.EntityFrameworkCore;   // For Include(), ThenInclude()
-using QuizApp.Models;                  // For QuizDbContext, Quiz, Question, AnswerOption, UserQuizResult
-using System.Collections.Generic;      // For Dictionary<int, int>
-using System.Linq;                     // For FirstOrDefault()
- 
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using QuizApp.Models;
+namespace QuizApp.Controllers;
  
  
 public class QuizController : Controller
