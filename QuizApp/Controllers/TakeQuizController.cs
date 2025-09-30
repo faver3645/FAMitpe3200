@@ -3,15 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using QuizApp.Data;
 using QuizApp.Models;
 namespace QuizApp.Controllers;
 
 {
     public class TakeQuizController : Controller
     {
-        private readonly ItemDbContext _context;
+        private readonly ApplicationDbContext _context;
  
-        public TakeQuizController(ItemDbContext context)
+        public TakeQuizController(ApplicationDbContext context)
         {
             _context = context;
         }
