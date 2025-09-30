@@ -1,6 +1,7 @@
 {
   "version": 3,
   "targets": {
+<<<<<<< HEAD
     "net8.0": {
       "Azure.Core/1.38.0": {
         "type": "package",
@@ -3997,27 +3998,34 @@
         "useSharedDesignerContext.txt"
       ]
     }
+=======
+    "net8.0": {}
+>>>>>>> 756f2980cdff2ee00e73a7408ce21bec59194c33
   },
   "projectFileDependencyGroups": {
+<<<<<<< HEAD
     "net8.0": [
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.*",
       "Microsoft.EntityFrameworkCore.Tools >= 8.*"
     ]
+=======
+    "net8.0": []
+>>>>>>> 756f2980cdff2ee00e73a7408ce21bec59194c33
   },
   "packageFolders": {
-    "C:\\Users\\Aliza Mudassar\\.nuget\\packages\\": {}
+    "C:\\Users\\Admin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Aliza Mudassar\\OneDrive - OsloMet\\webapplikasjoner\\FAMitpe3200\\QuizApp\\QuizApp.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\OneDrive - OsloMet\\ITPE3200EXAM\\FAMitpe3200\\QuizApp\\QuizApp.csproj",
       "projectName": "QuizApp",
-      "projectPath": "C:\\Users\\Aliza Mudassar\\OneDrive - OsloMet\\webapplikasjoner\\FAMitpe3200\\QuizApp\\QuizApp.csproj",
-      "packagesPath": "C:\\Users\\Aliza Mudassar\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Aliza Mudassar\\OneDrive - OsloMet\\webapplikasjoner\\FAMitpe3200\\QuizApp\\obj\\",
+      "projectPath": "C:\\Users\\Admin\\OneDrive - OsloMet\\ITPE3200EXAM\\FAMitpe3200\\QuizApp\\QuizApp.csproj",
+      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Admin\\OneDrive - OsloMet\\ITPE3200EXAM\\FAMitpe3200\\QuizApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Aliza Mudassar\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -4040,12 +4048,12 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      },
-      "SdkAnalysisLevel": "9.0.300"
+      }
     },
     "frameworks": {
       "net8.0": {
         "targetAlias": "net8.0",
+<<<<<<< HEAD
         "dependencies": {
           "Microsoft.EntityFrameworkCore.SqlServer": {
             "target": "Package",
@@ -4058,6 +4066,8 @@
             "version": "[8.*, )"
           }
         },
+=======
+>>>>>>> 756f2980cdff2ee00e73a7408ce21bec59194c33
         "imports": [
           "net461",
           "net462",
@@ -4077,7 +4087,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.413/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
