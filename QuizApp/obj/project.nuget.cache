@@ -1,6 +1,5 @@
 {
   "version": 2,
-<<<<<<< HEAD
   "dgSpecHash": "0hB6u+Nr9fA=",
   "success": true,
   "projectFilePath": "C:\\Users\\Aliza Mudassar\\OneDrive - OsloMet\\webapplikasjoner\\FAMitpe3200\\QuizApp\\QuizApp.csproj",
@@ -82,11 +81,15 @@
     "C:\\Users\\Aliza Mudassar\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\Aliza Mudassar\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
   ],
-=======
-  "dgSpecHash": "wq4G4pKFbLo=",
-  "success": true,
-  "projectFilePath": "C:\\Users\\Admin\\OneDrive - OsloMet\\ITPE3200EXAM\\FAMitpe3200\\QuizApp\\QuizApp.csproj",
-  "expectedPackageFiles": [],
->>>>>>> 756f2980cdff2ee00e73a7408ce21bec59194c33
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "message": "Problem reading the cache file C:\\Users\\Aliza Mudassar\\OneDrive - OsloMet\\webapplikasjoner\\FAMitpe3200\\QuizApp\\obj\\project.nuget.cache : '<' is an invalid start of a property name. Expected a '\"'. Path: $ | LineNumber: 2 | BytePositionInLine: 0.",
+      "projectPath": "C:\\Users\\Aliza Mudassar\\OneDrive - OsloMet\\webapplikasjoner\\FAMitpe3200\\QuizApp\\QuizApp.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\Aliza Mudassar\\OneDrive - OsloMet\\webapplikasjoner\\FAMitpe3200\\QuizApp\\QuizApp.csproj",
+      "targetGraphs": []
+    }
+  ]
 }
