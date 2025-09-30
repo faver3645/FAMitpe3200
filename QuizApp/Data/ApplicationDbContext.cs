@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using QuizApp.Models; 
 
-namespace FAMitpe3200.Data
+namespace QuizApp.Data
 {
     public class ApplicationDbContext : DbContext
     {
