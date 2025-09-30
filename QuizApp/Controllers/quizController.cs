@@ -1,56 +1,38 @@
-using QuizApp.Models;
-using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;        // For Controller, IActionResult, HttpPost, etc.
+using Microsoft.EntityFrameworkCore;   // For Include(), ThenInclude()
+using QuizApp.Models;                  // For QuizDbContext, Quiz, Question, AnswerOption, UserQuizResult
+using System.Collections.Generic;      // For Dictionary<int, int>
+using System.Linq;                     // For FirstOrDefault()
  
  
  
-public class TakeQuizController : Controller
+public class QuizController : Controller
 {
-    private readonly QuizDbContext_context;
+    private readonly QuizDbContext _context;
  
-    public TakeQuizController(QuizDbContext context)
+    public QuizController(QuizDbContext context)
     {
-        QuizDbContext_context = context;
+        _context = context;
     }
  
-    // Show quiz questions
-    public IActionResult Take(int quizId)
-    {
-        var quiz = _context.Quizzes
-                    .Include(q => q.Questions)
-                    .ThenInclude(q => q.AnswerOptions)
-                    .FirstOrDefault(q => q.QuizId == quizId);
+    // List all quizzes
+    public IActionResult Index() => View(_context.Quizzes.ToList());
  
-        if (quiz == null) return NotFound();
+    // Create quiz
+    [HttpGet]
+    public IActionResult Create() => View();
+ 
+    [HttpPost]
+    public IActionResult Create(Quiz quiz)
+    {
+        if (ModelState.IsValid)
+        {
+            _context.Quizzes.Add(quiz);
+            _context.SaveChanges();
+            return RedirectToAction(nameof(Index));
+        }
         return View(quiz);
     }
  
-    [HttpPost]
-    public IActionResult Submit(int quizId, Dictionary<int, int> answers, string userName)
-    {
-        var quiz = _context.Quizzes
-                    .Include(q => q.Questions)
-                    .ThenInclude(q => q.AnswerOptions)
-                    .FirstOrDefault(q => q.QuizId == quizId);
- 
-        int score = 0;
-        foreach (var question in quiz.Questions)
-        {
-            if (answers.TryGetValue(question.QuestionId, out int selectedAnswerId))
-            {
-                var selectedOption = question.AnswerOptions.FirstOrDefault(a => a.AnswerOptionId == selectedAnswerId);
-                if (selectedOption != null && selectedOption.IsCorrect) score++;
-            }
-        }
- 
-        _context.UserQuizResults.Add(new UserQuizResult { QuizId = quizId, UserName = userName, Score = score });
-        _context.SaveChanges();
- 
-        return RedirectToAction("Result", new { quizId = quizId, userName = userName });
-    }
- 
-    public IActionResult Result(int quizId, string userName)
-    {
-        var result = _context.UserQuizResults.FirstOrDefault(r => r.QuizId == quizId && r.UserName == userName);
-        return View(result);
-    }
+    // Edit, Delete, Details: samme prinsipp
 }
