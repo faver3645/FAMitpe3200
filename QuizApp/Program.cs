@@ -7,14 +7,14 @@ var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
 // Registrer DbContext
-//builder.Services.AddDbContext<ApplicationDbContext>(options =>
-   // options.UseSqlServer(connectionString));
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+   options.UseSqlServer(connectionString));
 
 
-builder.Services.AddDbContext<ApplicationDbContext>(options => {
-    options.UseSqlite(
-        builder.Configuration["ConnectionStrings:ApplicationDbContextConnection"]);
-});
+//builder.Services.AddDbContext<ApplicationDbContext>(options => {
+  //  options.UseSqlite(
+       // builder.Configuration["ConnectionStrings:ApplicationDbContextConnection"]);
+//});
 
 builder.Services.AddControllersWithViews();
 
