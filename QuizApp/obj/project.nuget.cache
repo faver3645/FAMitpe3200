@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "fvSddWm/RBs=",
   "success": true,
   "projectFilePath": "C:\\Users\\Admin\\OneDrive - OsloMet\\ITPE3200EXAM\\FAMitpe3200\\QuizApp\\QuizApp.csproj",
+=======
+  "dgSpecHash": "UuafPzwFq5s=",
+  "success": true,
+  "projectFilePath": "C:\\Dev\\FAMitpe3200\\QuizApp\\QuizApp.csproj",
+>>>>>>> 1534cc555992dfe96febb93e52b4faa6f926d3f5
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

@@ -1,6 +1,7 @@
 {
   "Files": [
     {
+<<<<<<< HEAD
       "Id": "C:\\Users\\Admin\\OneDrive - OsloMet\\ITPE3200EXAM\\FAMitpe3200\\QuizApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\QuizApp.bundle.scp.css",
       "PackagePath": "staticwebassets\\QuizApp.bundle.scp.css"
     },
@@ -10,6 +11,17 @@
     },
     {
       "Id": "C:\\Users\\Admin\\OneDrive - OsloMet\\ITPE3200EXAM\\FAMitpe3200\\QuizApp\\wwwroot\\js\\jquery.min.js",
+=======
+      "Id": "C:\\Dev\\FAMitpe3200\\QuizApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\QuizApp.bundle.scp.css",
+      "PackagePath": "staticwebassets\\QuizApp.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Dev\\FAMitpe3200\\QuizApp\\wwwroot\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Dev\\FAMitpe3200\\QuizApp\\wwwroot\\js\\jquery.min.js",
+>>>>>>> 1534cc555992dfe96febb93e52b4faa6f926d3f5
       "PackagePath": "staticwebassets\\js\\jquery.min.js"
     },
     {

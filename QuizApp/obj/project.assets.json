@@ -4327,11 +4327,19 @@
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\Admin\\OneDrive - OsloMet\\ITPE3200EXAM\\FAMitpe3200\\QuizApp\\QuizApp.csproj",
       "projectName": "QuizApp",
       "projectPath": "C:\\Users\\Admin\\OneDrive - OsloMet\\ITPE3200EXAM\\FAMitpe3200\\QuizApp\\QuizApp.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Admin\\OneDrive - OsloMet\\ITPE3200EXAM\\FAMitpe3200\\QuizApp\\obj\\",
+=======
+      "projectUniqueName": "C:\\Dev\\FAMitpe3200\\QuizApp\\QuizApp.csproj",
+      "projectName": "QuizApp",
+      "projectPath": "C:\\Dev\\FAMitpe3200\\QuizApp\\QuizApp.csproj",
+      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+      "outputPath": "C:\\Dev\\FAMitpe3200\\QuizApp\\obj\\",
+>>>>>>> 1534cc555992dfe96febb93e52b4faa6f926d3f5
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config"

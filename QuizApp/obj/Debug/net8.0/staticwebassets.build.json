@@ -1,6 +1,10 @@
 {
   "Version": 1,
+<<<<<<< HEAD
   "Hash": "U+hO3TnulZyTqEUHeUDDZPQwSaNKj6EIzoocgATZ7eU=",
+=======
+  "Hash": "DjQBuQBlrcNiwnBbwm0tfeEuLPhudYyNjL6qbEFzzPs=",
+>>>>>>> 1534cc555992dfe96febb93e52b4faa6f926d3f5
   "Source": "QuizApp",
   "BasePath": "_content/QuizApp",
   "Mode": "Default",
@@ -10,17 +14,28 @@
     {
       "Name": "QuizApp\\wwwroot",
       "Source": "QuizApp",
+<<<<<<< HEAD
       "ContentRoot": "C:\\Users\\Admin\\OneDrive - OsloMet\\ITPE3200EXAM\\FAMitpe3200\\QuizApp\\wwwroot\\",
+=======
+      "ContentRoot": "C:\\Dev\\FAMitpe3200\\QuizApp\\wwwroot\\",
+>>>>>>> 1534cc555992dfe96febb93e52b4faa6f926d3f5
       "BasePath": "_content/QuizApp",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\OneDrive - OsloMet\\ITPE3200EXAM\\FAMitpe3200\\QuizApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\QuizApp.styles.css",
       "SourceId": "QuizApp",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\Admin\\OneDrive - OsloMet\\ITPE3200EXAM\\FAMitpe3200\\QuizApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+=======
+      "Identity": "C:\\Dev\\FAMitpe3200\\QuizApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\QuizApp.styles.css",
+      "SourceId": "QuizApp",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Dev\\FAMitpe3200\\QuizApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+>>>>>>> 1534cc555992dfe96febb93e52b4faa6f926d3f5
       "BasePath": "_content/QuizApp",
       "RelativePath": "QuizApp.styles.css",
       "AssetKind": "All",
@@ -33,6 +48,7 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
+<<<<<<< HEAD
       "OriginalItemSpec": "C:\\Users\\Admin\\OneDrive - OsloMet\\ITPE3200EXAM\\FAMitpe3200\\QuizApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\QuizApp.styles.css"
     },
     {
@@ -40,6 +56,15 @@
       "SourceId": "QuizApp",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\Admin\\OneDrive - OsloMet\\ITPE3200EXAM\\FAMitpe3200\\QuizApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+=======
+      "OriginalItemSpec": "C:\\Dev\\FAMitpe3200\\QuizApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\QuizApp.styles.css"
+    },
+    {
+      "Identity": "C:\\Dev\\FAMitpe3200\\QuizApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\QuizApp.bundle.scp.css",
+      "SourceId": "QuizApp",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Dev\\FAMitpe3200\\QuizApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+>>>>>>> 1534cc555992dfe96febb93e52b4faa6f926d3f5
       "BasePath": "_content/QuizApp",
       "RelativePath": "QuizApp.bundle.scp.css",
       "AssetKind": "All",
@@ -52,6 +77,7 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
+<<<<<<< HEAD
       "OriginalItemSpec": "C:\\Users\\Admin\\OneDrive - OsloMet\\ITPE3200EXAM\\FAMitpe3200\\QuizApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\QuizApp.bundle.scp.css"
     },
     {
@@ -59,6 +85,15 @@
       "SourceId": "QuizApp",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\OneDrive - OsloMet\\ITPE3200EXAM\\FAMitpe3200\\QuizApp\\wwwroot\\",
+=======
+      "OriginalItemSpec": "C:\\Dev\\FAMitpe3200\\QuizApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\QuizApp.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Dev\\FAMitpe3200\\QuizApp\\wwwroot\\js\\bootstrap.js",
+      "SourceId": "QuizApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Dev\\FAMitpe3200\\QuizApp\\wwwroot\\",
+>>>>>>> 1534cc555992dfe96febb93e52b4faa6f926d3f5
       "BasePath": "_content/QuizApp",
       "RelativePath": "js/bootstrap.js",
       "AssetKind": "All",
@@ -74,10 +109,17 @@
       "OriginalItemSpec": "wwwroot\\js\\bootstrap.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\OneDrive - OsloMet\\ITPE3200EXAM\\FAMitpe3200\\QuizApp\\wwwroot\\js\\jquery.min.js",
       "SourceId": "QuizApp",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\OneDrive - OsloMet\\ITPE3200EXAM\\FAMitpe3200\\QuizApp\\wwwroot\\",
+=======
+      "Identity": "C:\\Dev\\FAMitpe3200\\QuizApp\\wwwroot\\js\\jquery.min.js",
+      "SourceId": "QuizApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Dev\\FAMitpe3200\\QuizApp\\wwwroot\\",
+>>>>>>> 1534cc555992dfe96febb93e52b4faa6f926d3f5
       "BasePath": "_content/QuizApp",
       "RelativePath": "js/jquery.min.js",
       "AssetKind": "All",
