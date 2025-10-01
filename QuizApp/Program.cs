@@ -3,30 +3,27 @@ using QuizApp.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Connection string fra appsettings.json
-var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
-
-// Registrer DbContext
-//builder.Services.AddDbContext<ApplicationDbContext>(options =>
-   // options.UseSqlServer(connectionString));
-
-
-builder.Services.AddDbContext<ApplicationDbContext>(options => {
-    options.UseSqlite(
-        builder.Configuration["ConnectionStrings:ApplicationDbContextConnection"]);
-});
-
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+{
+    options.UseSqlite(
+        builder.Configuration.GetConnectionString("ApplicationDbContextConnection"));
+});
 
 var app = builder.Build();
 
-app.UseHttpsRedirection();
-app.UseStaticFiles();
-app.UseRouting();
-app.UseAuthorization();
+if (app.Environment.IsDevelopment())
+{
+    app.UseDeveloperExceptionPage();
+}
 
-app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+app.UseStaticFiles();
+
+app.MapDefaultControllerRoute();
+
+// app.MapControllerRoute(
+//     name: "default",
+//     pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();

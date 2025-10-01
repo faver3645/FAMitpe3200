@@ -1,40 +1,101 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+namespace QuizApp.Controllers;
+using Microsoft.EntityFrameworkCore;
+
 using QuizApp.Data;
 using QuizApp.Models;
-namespace QuizApp.Controllers;
- 
- 
-public class QuizController : Controller
-{
-    private readonly ApplicationDbContext _context;
- 
-    public QuizController(ApplicationDbContext context)
+
+    public class QuizController : Controller
     {
-        _context = context;
-    }
- 
-    // List all quizzes
-    public IActionResult Index() => View(_context.Quizzes.ToList());
- 
-    // Create quiz
-    [HttpGet]
-    public IActionResult Create() => View();
- 
-    [HttpPost]
-    public IActionResult Create(Quiz quiz)
-    {
-        if (ModelState.IsValid)
+        private readonly ApplicationDbContext _context;
+
+        public QuizController(ApplicationDbContext context)
         {
-            _context.Quizzes.Add(quiz);
-            _context.SaveChanges();
+            _context = context;
+        }
+
+        // GET: /Quiz
+        public async Task<IActionResult> Index()
+        {
+            var quizzes = await _context.Quizzes.ToListAsync();
+            return View(quizzes);
+        }
+
+        // GET: /Quiz/Details/5
+        public async Task<IActionResult> Details(int id)
+        {
+            var quiz = await _context.Quizzes
+                .Include(q => q.Questions)
+                .ThenInclude(q => q.AnswerOptions)
+                .FirstOrDefaultAsync(q => q.QuizId == id);
+
+            if (quiz == null) return NotFound();
+
+            return View(quiz);
+        }
+
+        // GET: /Quiz/Create
+        [HttpGet]
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        // POST: /Quiz/Create
+        [HttpPost]
+        public async Task<IActionResult> Create(Quiz quiz)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Quizzes.Add(quiz);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            return View(quiz);
+        }
+
+        // GET: /Quiz/Edit/5
+        [HttpGet]
+        public async Task<IActionResult> Edit(int id)
+        {
+            var quiz = await _context.Quizzes.FindAsync(id);
+            if (quiz == null) return NotFound();
+
+            return View(quiz);
+        }
+
+        // POST: /Quiz/Edit/5
+        [HttpPost]
+        public async Task<IActionResult> Edit(Quiz quiz)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Quizzes.Update(quiz);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            return View(quiz);
+        }
+
+        // GET: /Quiz/Delete/5
+        [HttpGet]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var quiz = await _context.Quizzes.FindAsync(id);
+            if (quiz == null) return NotFound();
+
+            return View(quiz);
+        }
+
+        // POST: /Quiz/DeleteConfirmed/5
+        [HttpPost]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            var quiz = await _context.Quizzes.FindAsync(id);
+            if (quiz == null) return NotFound();
+
+            _context.Quizzes.Remove(quiz);
+            await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
-        return View(quiz);
     }
- 
-    // Edit, Delete, Details: samme prinsipp
-}
